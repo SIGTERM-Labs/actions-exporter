@@ -1,6 +1,6 @@
 package main
 
-import "github.com/chia-network/actions-exporter/cmd"
+import "github.com/sigterm-labs/actions-exporter/cmd"
 
 func main() {
 	cmd.Execute()

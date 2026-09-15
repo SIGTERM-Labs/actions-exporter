@@ -29,3 +29,9 @@ This app requires a classic Personal Access Token with the following scope:
 - **`repo`** — needed to list organization/user repositories and their Actions workflows (includes private repos)
 
 If you only need to monitor public repositories, `public_repo` is sufficient.
+
+## Attribution
+
+This project is a fork of [Chia-Network/actions-exporter](https://github.com/Chia-Network/actions-exporter), originally developed at Chia Network, Inc., and is now maintained independently by its original author(s). It is not affiliated with or endorsed by Chia Network, Inc.
+
+Code from the original project is Copyright Chia Network, Inc. Modifications made after the fork are Copyright SIGTERM-Labs. All code is licensed under the Apache License 2.0; see [LICENSE](LICENSE).

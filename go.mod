@@ -1,4 +1,4 @@
-module github.com/chia-network/actions-exporter
+module github.com/sigterm-labs/actions-exporter
 
 go 1.25.0
 

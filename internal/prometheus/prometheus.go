@@ -4,7 +4,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	log "github.com/sirupsen/logrus"
 
-	gh "github.com/chia-network/actions-exporter/internal/github"
+	gh "github.com/sigterm-labs/actions-exporter/internal/github"
 )
 
 // Collector contains all prometheus metric Descs

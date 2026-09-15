@@ -11,7 +11,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	log "github.com/sirupsen/logrus"
 
-	internalProm "github.com/chia-network/actions-exporter/internal/prometheus"
+	internalProm "github.com/sigterm-labs/actions-exporter/internal/prometheus"
 )
 
 // Server is the config for the http server
