@@ -8,9 +8,9 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	gh "github.com/chia-network/actions-exporter/internal/github"
-	"github.com/chia-network/actions-exporter/internal/http"
-	"github.com/chia-network/actions-exporter/internal/prometheus"
+	gh "github.com/sigterm-labs/actions-exporter/internal/github"
+	"github.com/sigterm-labs/actions-exporter/internal/http"
+	"github.com/sigterm-labs/actions-exporter/internal/prometheus"
 )
 
 var cfgFile string

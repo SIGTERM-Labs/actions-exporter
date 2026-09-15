@@ -1,7 +1,7 @@
 package prometheus
 
 import (
-	"github.com/chia-network/actions-exporter/internal/github"
+	"github.com/sigterm-labs/actions-exporter/internal/github"
 	log "github.com/sirupsen/logrus"
 )
 
