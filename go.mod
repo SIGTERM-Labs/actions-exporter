@@ -3,7 +3,7 @@ module github.com/sigterm-labs/actions-exporter
 go 1.26.0
 
 require (
-	github.com/google/go-github/v84 v84.0.0
+	github.com/google/go-github/v93 v93.0.0
 	github.com/google/go-github/v93 v93.0.0
 	github.com/gorilla/mux v1.8.1
 	github.com/patrickmn/go-cache v2.1.0+incompatible
