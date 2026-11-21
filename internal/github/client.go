@@ -5,10 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/google/go-github/v84/github"
+	"github.com/google/go-github/v93/github"
 	"github.com/patrickmn/go-cache"
 	log "github.com/sirupsen/logrus"
-	"golang.org/x/oauth2"
 )
 
 var (
@@ -16,17 +15,22 @@ var (
 	cash   *cache.Cache
 )
 
-// Init constructs a github API client for this package taking in a token
-func Init(token string) {
-	ctx := context.Background()
-	ts := oauth2.StaticTokenSource(
-		&oauth2.Token{AccessToken: token},
-	)
-	tc := oauth2.NewClient(ctx, ts)
-	client = github.NewClient(tc)
+// Init constructs a github API client for this package taking in a token.
+// An empty token yields an unauthenticated client.
+func Init(token string) error {
+	var opts []github.ClientOptionsFunc
+	if token != "" {
+		opts = append(opts, github.WithAuthToken(token))
+	}
+	c, err := github.NewClient(opts...)
+	if err != nil {
+		return fmt.Errorf("creating github client: %w", err)
+	}
+	client = c
 
 	// init cache, defaults 1 hour expiration and purges expired items every 10 minutes
 	cash = cache.New(1*time.Hour, 10*time.Minute)
+	return nil
 }
 
 // GetRateLimits calls the GET /rate_limit endpoint, which does not count against the rate limit

@@ -28,7 +28,9 @@ var rootCmd = &cobra.Command{
 			log.Fatalln("at least one of --github-org or --github-user must be provided")
 		}
 
-		gh.Init(viper.GetString("github-token"))
+		if err := gh.Init(viper.GetString("github-token")); err != nil {
+			log.Fatalln(err.Error())
+		}
 		prometheus.Init(org, user)
 
 		m, err := http.NewServer(uint16(viper.GetUint("server-port")))
